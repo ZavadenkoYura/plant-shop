@@ -6,6 +6,17 @@ const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   // Override default ignores of eslint-config-next.
+
+  // Custom rules
+  {
+    rules: {
+      "semi": ["error", "always"],
+      "quotes": ["error", "double"],
+      "no-unused-vars": "warn"
+    }
+  },
+
+
   globalIgnores([
     // Default ignores of eslint-config-next:
     ".next/**",
